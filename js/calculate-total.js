@@ -8,5 +8,5 @@ document.getElementById('btn-calculate-total').addEventListener('click', functio
         return;
     } else {
         totalExpensesElement.innerText = totalExpenses;
-    }
+    };
 })

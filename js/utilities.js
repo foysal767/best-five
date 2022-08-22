@@ -1,5 +1,5 @@
-function getInputElementById(element){
-    const elementInputField = document.getElementById(element);
+function getInputElementById(elementId){
+    const elementInputField = document.getElementById(elementId);
     const elementFieldString = elementInputField.value;
     if(isNaN(elementFieldString)){
         alert(elementFieldString + ' is not a valid number!!!');
@@ -11,11 +11,11 @@ function getInputElementById(element){
             alert(elementFieldNumber + ' is a negative Number!!!');
         } else {
             return elementFieldNumber;
-        }
-    }
+        };
+    };
 }
-function getSpanElementById(element){
-    const elementInputField = document.getElementById(element);
+function getSpanElementById(elementId){
+    const elementInputField = document.getElementById(elementId);
     const elementFieldString = elementInputField.innerText;
     const elementFieldNumber = parseInt(elementFieldString);
     return elementFieldNumber;

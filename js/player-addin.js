@@ -1,7 +1,5 @@
 const selectArray = [];
-
 const selectBtnAll = document.getElementsByClassName('btn-select');
-
 for(const selectBtn of selectBtnAll){
     selectBtn.addEventListener('click', function(event){
         const selectElement = event.target.parentNode.children[1].innerText;
@@ -17,14 +15,8 @@ for(const selectBtn of selectBtnAll){
             selectBtn.style.backgroundColor = '#81e6d9';
             selectBtn.style.color = 'black';
         } else {
-            alert('You Cannot Select More Than Five Player!!!')
+            alert('You Cannot Select More Than Five Players!!!');
             return;
-        }
-        // console.log(selectArray.length);
-        // console.log(selectArray)
-        // const playerOl = document.getElementById('player-ol');
-        // const li = document.createElement('li');
-        // li.innerText = `${selectElement}`
-        // playerOl.appendChild(li);
-    })
+        };
+    });
 }
