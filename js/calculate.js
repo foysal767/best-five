@@ -3,5 +3,9 @@ document.getElementById('btn-calculate').addEventListener('click', function(){
     const selectedPlayerNumber = getSpanElementById('selected-Player');
     const playerExpensesElement = document.getElementById('player-expense');
     const selectedPlayerExpenses = perPlayerAmount * selectedPlayerNumber;
-    playerExpensesElement.innerText = selectedPlayerExpenses;
+    if(typeof perPlayerAmount !== "number"){
+        return;
+    } else {
+        playerExpensesElement.innerText = selectedPlayerExpenses;
+    }
 })

@@ -4,5 +4,9 @@ document.getElementById('btn-calculate-total').addEventListener('click', functio
     const playerExpenses = getSpanElementById('player-expense');
     const totalExpensesElement = document.getElementById('total-expense');
     const totalExpenses = managerExpense + coachExpense + playerExpenses;
-    totalExpensesElement.innerText = totalExpenses;
+    if(typeof managerExpense !== "number" || typeof coachExpense !== "number" || typeof playerExpenses !== "number"){
+        return;
+    } else {
+        totalExpensesElement.innerText = totalExpenses;
+    }
 })
