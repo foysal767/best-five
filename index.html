@@ -45,11 +45,10 @@
         <img class="mx-auto pt-4" src="images/messi_.png" alt="" />
         <h1 class="text-2xl my-4 font-bold">Lionel Messi</h1>
         <p class="text-gray-400 text-lg font-medium mb-4">
-          36 Goals - 120 Assit
+          36 Goals - 120 Assist
         </p>
         <button
-          class="text-black rounded px-8 py-2 text-xl font-semibold mb-4 bg-teal-100 focus:text-black"
-          disabled
+          class="btn-select bg-teal-600 rounded px-8 py-2 text-xl font-semibold mb-4"
         >
           Select
         </button>
@@ -58,10 +57,10 @@
         <img class="mx-auto pt-4" src="images/naymar_.png" alt="" />
         <h1 class="text-2xl my-4 font-bold">Neymar Jr</h1>
         <p class="text-gray-400 text-lg font-medium mb-4">
-          36 Goals - 120 Assit
+          36 Goals - 120 Assist
         </p>
         <button
-          class="bg-teal-600 rounded px-8 py-2 text-xl font-semibold mb-4 focus:bg-teal-100 focus:text-black"
+          class="btn-select bg-teal-600 rounded px-8 py-2 text-xl font-semibold mb-4"
         >
           Select
         </button>
@@ -70,19 +69,18 @@
         <img class="mx-auto pt-4" src="images/Mbappe_.png" alt="" />
         <h1 class="text-2xl my-4 font-bold">Kylian Mbappé</h1>
         <p class="text-gray-400 text-lg font-medium mb-4">
-          36 Goals - 120 Assit
+          36 Goals - 120 Assist
         </p>
         <button
-          class="bg-teal-600 rounded px-8 py-2 text-xl font-semibold mb-4 focus:bg-teal-100 focus:text-black"
+          class="btn-select bg-teal-600 rounded px-8 py-2 text-xl font-semibold mb-4"
         >
           Select
         </button>
       </div>
       <div class="bg-slate-900 text-white text-center">
-        <h1 class="text-2xl font-bold py-8">Selected - V</h1>
-        <div class="w-9/12 px-16">
-          <ol class="list-decimal text-gray-400 font-medium text-lg text-left">
-            <li class="py-2">Lionel Messi</li>
+        <h1 class="text-2xl font-bold py-8">Selected - <span id="selected-Player">0</span></h1>
+        <div class="w-9/12 px-12">
+          <ol id="player-ol" class="list-decimal text-gray-400 font-medium text-lg text-left">
           </ol>
         </div>
       </div>
@@ -90,10 +88,10 @@
         <img class="mx-auto pt-4" src="images/machado_.png" alt="" />
         <h1 class="text-2xl my-4 font-bold">Vítor Machado</h1>
         <p class="text-gray-400 text-lg font-medium mb-4">
-          36 Goals - 120 Assit
+          36 Goals - 120 Assist
         </p>
         <button
-          class="bg-teal-600 rounded px-8 py-2 text-xl font-semibold mb-4 focus:bg-teal-100 focus:text-black"
+          class="btn-select bg-teal-600 rounded px-8 py-2 text-xl font-semibold mb-4"
         >
           Select
         </button>
@@ -102,10 +100,10 @@
         <img class="mx-auto pt-4" src="images/ramos_.png" alt="" />
         <h1 class="text-2xl my-4 font-bold">Sergio Ramos</h1>
         <p class="text-gray-400 text-lg font-medium mb-4">
-          36 Goals - 120 Assit
+          36 Goals - 120 Assist
         </p>
         <button
-          class="bg-teal-600 rounded px-8 py-2 text-xl font-semibold mb-4 focus:bg-teal-100 focus:text-black"
+          class="btn-select bg-teal-600 rounded px-8 py-2 text-xl font-semibold mb-4"
         >
           Select
         </button>
@@ -114,10 +112,10 @@
         <img class="mx-auto pt-4" src="images/sanches_.png" alt="" />
         <h1 class="text-2xl my-4 font-bold">Renato Sanches</h1>
         <p class="text-gray-400 text-lg font-medium mb-4">
-          36 Goals - 120 Assit
+          36 Goals - 120 Assist
         </p>
         <button
-          class="bg-teal-600 rounded px-8 py-2 text-xl font-semibold mb-4 focus:bg-teal-100 focus:text-black"
+          class="btn-select bg-teal-600 rounded px-8 py-2 text-xl font-semibold mb-4"
         >
           Select
         </button>
@@ -126,24 +124,24 @@
         <h1 class="text-2xl pt-4 mb-4">Budget</h1>
         <p class="text-gray-400 mb-4">
           Per Player:
-          <input
+          <input id="per-player-input-field"
             class="bg-slate-900 w-1/2 text-white px-4 py-2 rounded border border:white-100 ml-2"
             type="text"
             placeholder="Enter Amount"
           />
         </p>
-        <button
+        <button id="btn-calculate"
           class="bg-teal-600 rounded px-20 py-2 text-xl font-semibold mb-4 focus:bg-teal-100 focus:text-black"
         >
           Calculate
         </button>
         <p class="text-gray-400 text-base mb-4">
           Player Expenses: <span class="text-white">$</span></span
-          ><span class="text-white">0</span>
+          ><span id="player-expense" class="text-white">0</span>
         </p>
         <p class="text-gray-400 mb-3">
           Manager:
-          <input
+          <input id="manager-input-field"
             class="bg-slate-900 w-1/2 text-white px-4 py-2 rounded border border:white-100 ml-2"
             type="text"
             placeholder="Enter Amount"
@@ -151,18 +149,18 @@
         </p>
         <p class="text-gray-400 mb-3">
           Coach:
-          <input
+          <input id="coach-input-field"
             class="bg-slate-900 w-1/2 text-white px-4 py-2 rounded border border:white-100 ml-2"
             type="text"
             placeholder="Enter Amount"
           />
         </p>
-        <button
+        <button id="btn-calculate-total"
           class="bg-teal-600 rounded px-20 py-2 text-xl font-semibold mb-3 focus:bg-teal-100 focus:text-black"
         >
           Calculate Total
         </button>
-        <h1 class="text-gray-400 text-xl font-semibold pb-3">Total: <span class="text-orange-400">$</span><span class="text-orange-400 font-semibold">0</span></h1>
+        <h1 class="text-gray-400 text-xl font-semibold pb-3">Total: <span class="text-orange-400">$</span><span id="total-expense" class="text-orange-400 font-semibold">0</span></h1>
       </div>
       <div class="bg-slate-900 text-white text-center">
         <img
@@ -172,10 +170,10 @@
         />
         <h1 class="text-2xl my-4 font-bold">Di Maria</h1>
         <p class="text-gray-400 text-lg font-medium mb-4">
-          36 Goals - 120 Assit
+          36 Goals - 120 Assist
         </p>
         <button
-          class="bg-teal-600 rounded px-8 py-2 text-xl font-semibold mb-4 focus:bg-teal-100 focus:text-black"
+          class="btn-select bg-teal-600 rounded px-8 py-2 text-xl font-semibold mb-4"
         >
           Select
         </button>
@@ -184,10 +182,10 @@
         <img class="mx-auto pt-4 w-11/12" src="images/verratti.jpg" alt="" />
         <h1 class="text-2xl my-4 font-bold">Marco Verratti</h1>
         <p class="text-gray-400 text-lg font-medium mb-4">
-          36 Goals - 120 Assit
+          36 Goals - 120 Assist
         </p>
         <button
-          class="bg-teal-600 rounded px-8 py-2 text-xl font-semibold mb-4 focus:bg-teal-100 focus:text-black"
+          class="btn-select bg-teal-600 rounded px-8 py-2 text-xl font-semibold mb-4"
         >
           Select
         </button>
@@ -200,15 +198,19 @@
         />
         <h1 class="text-2xl my-4 font-bold">Keylor Navas</h1>
         <p class="text-gray-400 text-lg font-medium mb-4">
-          36 Goals - 120 Assit
+          36 Goals - 120 Assist
         </p>
         <button
-          class="bg-teal-600 rounded px-8 py-2 text-xl font-semibold mb-4 focus:bg-teal-100 focus:text-black"
+          class="btn-select bg-teal-600 rounded px-8 py-2 text-xl font-semibold mb-4"
         >
           Select
         </button>
       </div>
     </main>
     <!-- Main section end -->
+    <script src="js/utilities.js"></script>
+    <script src="js/player-addin.js"></script>
+    <script src="js/calculate.js"></script>
+    <script src="js/calculate-total.js"></script>
   </body>
 </html>
