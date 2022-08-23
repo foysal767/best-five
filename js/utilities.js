@@ -9,6 +9,8 @@ function getInputElementById(elementId){
         const elementFieldNumber = parseInt(elementFieldString);
         if(elementFieldNumber < 0){
             alert(elementFieldNumber + ' is a negative Number!!!');
+        } else if(elementFieldNumber == 0){
+            alert('Amount must be enter more than 0!!!')
         } else {
             return elementFieldNumber;
         };
